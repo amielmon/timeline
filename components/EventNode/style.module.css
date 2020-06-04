@@ -1,0 +1,10 @@
+.container {
+  border: 2px solid red;
+  height: 100px;
+}
+.date {
+  color: white
+}
+.eventBody {
+  color: white
+}
