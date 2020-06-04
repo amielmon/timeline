@@ -1,6 +1,6 @@
 .container {
-  border: 2px solid red;
-  height: 100px;
+  border: 2px solid white;
+  width: 50%;
 }
 .date {
   color: white

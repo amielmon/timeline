@@ -1,9 +1,34 @@
-.container {
-  width: 100%;
-  background: gray;
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
 
+.container {
+  display: flex;
+  width: 100vw!important;
+  position: sticky;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: space-between;
 }
-.title {
+
+.container .title {
+  color: rgba(252, 226, 27);
+  font-family: 'Playfair Display', serif;
+  font-size: 50px;
+  margin-left: 30px;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+}
+
+.subtitle {
   color: white;
-  font-size: 72px;
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-style: italic;
+  margin-right: 50px;
+}
+
+.subtitle:hover {
+  color: rgba(74,	68,	242, 0.8);
 }

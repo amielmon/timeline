@@ -1,3 +1,26 @@
+.about {
+  color: white;
+}
+
+.about .bg {
+  background: url('../photos/Background.gif');
+  height: 100vh!important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.8;
+}
+
+.about .text {
+  color: white;
+  font-size: 20px;
+}
+
 .page {
   background: black;
+}
+
+.text {
+  color: white;
+  font-size: 100px;
 }

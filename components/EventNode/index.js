@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './style.module.css'
-import ReactMarkdown from 'react-markdown'
+import ReactMarkdown from 'react-markdown/with-html'
 
 function EventNode({markdown, text}) {
   return (
