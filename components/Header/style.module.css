@@ -2,11 +2,12 @@
 
 .container {
   display: flex;
-  width: 100vw!important;
+  width: 100%;
   position: sticky;
   top: 0;
   background-color: rgba(0, 0, 0, 0.8);
   justify-content: space-between;
+  z-index: 1;
 }
 
 .container .title {
