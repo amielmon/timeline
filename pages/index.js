@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 import EventNode from '../components/EventNode'
 import Header from '../components/Header'
@@ -15,21 +15,11 @@ export default function Home() {
       <div className={styles.about}>
         <div className={styles.bg}>
           <span className={styles.text} >
-            <EventNode markdown={aboutTitle + text} />
+            <EventNode title={aboutTitle} description={text} />
           </span>
         </div>
       </div>
-      <EventNode markdown={markdown} text='every'/>
-      <EventNode markdown={markdown} text='second'/>
-      <EventNode markdown={markdown} text='counts'/>
-      <EventNode markdown={markdown} text='i'/>
-      <EventNode markdown={markdown} text='dont'/>
-      <EventNode markdown={markdown} text='wanna'/>
-      <EventNode markdown={markdown} text='talk'/>
-      <EventNode markdown={markdown} text='to'/>
-      <EventNode markdown={markdown} text='you'/>
-      <EventNode markdown={markdown} text='anymore'/>
-      <EventNode markdown={markdown} text='yeah'/>
+      <EventNode source='1265427168286453760' type='TWEET-VID' title='The Start' date={'May 26, 2020'}/>
       <p>pee</p>
     </body>
   )
