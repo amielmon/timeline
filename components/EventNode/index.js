@@ -1,12 +1,11 @@
 import React from 'react'
 import styles from './style.module.css'
-import ReactMarkdown from 'react-markdown/with-html'
 
-function EventNode({markdown, text}) {
+function EventNode({text, embed}) {
   return (
   <div className={styles.container}>
-    <ReactMarkdown className={styles.eventBody} escapeHtml={false} source={markdown}/>
     <span className={styles.date}>{text}</span>
+    <span>{embed}</span>
   </div>
   )
 }
