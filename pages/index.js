@@ -19,7 +19,6 @@ export default function Home() {
         </div>
       </div>
       <EventNode source='1265427168286453760' type='TWEET-VID' title='The Start' date={'May 26, 2020'}/>
-      <p>pee</p>
     </body>
   )
 }
