@@ -4,7 +4,7 @@ import { TwitterTweetEmbed, TwitterVideoEmbed } from 'react-twitter-embed';
 
 function EventNode({source, type, title, description, date}) {
 
-  const [isHovering, showContents] = useState('false')
+  const [isHovering, showContents] = useState(false)
 
   // Deciphers which component to use based on the type
   let media;
