@@ -18,7 +18,28 @@ export default function Home() {
           </span>
         </div>
       </div>
-      <EventNode source='1265427168286453760' type='TWEET-VID' title='The Start' date={'May 26, 2020'}/>
+      <div className={styles.timeline}>
+        <EventNode source='1265427168286453760' mediaType='TWEET-VID' title='The Start' description={'The protests begin following the killing of George Floyd in Minneapolis'} date={'May 26, 2020'}/>
+        <EventNode source='https://www.instagram.com/p/CBOqUMqj82o/?igshid=75bs2m6apos8' mediaType='INSTAGRAM' title='San Jose' description={'Thousands of peaceful protestors gather in San Jose'} date={'June 2, 2020'} />
+        <EventNode source='1265427168286453760' mediaType='TWEET-VID' title='The Start' description={'The protests begin following the killing of George Floyd in Minneapolis'} date={'May 26, 2020'}/>
+        <EventNode source='https://www.instagram.com/p/CBOqUMqj82o/?igshid=75bs2m6apos8' mediaType='INSTAGRAM' title='San Jose' description={'Thousands of peaceful protestors gather in San Jose'} date={'June 2, 2020'} />
+        <EventNode source='1265427168286453760' mediaType='TWEET-VID' title='The Start' description={'The protests begin following the killing of George Floyd in Minneapolis'} date={'May 26, 2020'}/>
+        <EventNode source='https://www.instagram.com/p/CBOqUMqj82o/?igshid=75bs2m6apos8' mediaType='INSTAGRAM' title='San Jose' description={'Thousands of peaceful protestors gather in San Jose'} date={'June 2, 2020'} />
+        <EventNode source='1265427168286453760' mediaType='TWEET-VID' title='The Start' description={'The protests begin following the killing of George Floyd in Minneapolis'} date={'May 26, 2020'}/>
+        <EventNode source='https://www.instagram.com/p/CBOqUMqj82o/?igshid=75bs2m6apos8' mediaType='INSTAGRAM' title='San Jose' description={'Thousands of peaceful protestors gather in San Jose'} date={'June 2, 2020'} />
+        <EventNode source='1265427168286453760' mediaType='TWEET-VID' title='The Start' description={'The protests begin following the killing of George Floyd in Minneapolis'} date={'May 26, 2020'}/>
+        <EventNode source='https://www.instagram.com/p/CBOqUMqj82o/?igshid=75bs2m6apos8' mediaType='INSTAGRAM' title='San Jose' description={'Thousands of peaceful protestors gather in San Jose'} date={'June 2, 2020'} />
+        <EventNode source='1265427168286453760' mediaType='TWEET-VID' title='The Start' description={'The protests begin following the killing of George Floyd in Minneapolis'} date={'May 26, 2020'}/>
+        <EventNode source='https://www.instagram.com/p/CBOqUMqj82o/?igshid=75bs2m6apos8' mediaType='INSTAGRAM' title='San Jose' description={'Thousands of peaceful protestors gather in San Jose'} date={'June 2, 2020'} />
+        <EventNode source='1265427168286453760' mediaType='TWEET-VID' title='The Start' description={'The protests begin following the killing of George Floyd in Minneapolis'} date={'May 26, 2020'}/>
+        <EventNode source='https://www.instagram.com/p/CBOqUMqj82o/?igshid=75bs2m6apos8' mediaType='INSTAGRAM' title='San Jose' description={'Thousands of peaceful protestors gather in San Jose'} date={'June 2, 2020'} />
+        <EventNode source='1265427168286453760' mediaType='TWEET-VID' title='The Start' description={'The protests begin following the killing of George Floyd in Minneapolis'} date={'May 26, 2020'}/>
+        <EventNode source='https://www.instagram.com/p/CBOqUMqj82o/?igshid=75bs2m6apos8' mediaType='INSTAGRAM' title='San Jose' description={'Thousands of peaceful protestors gather in San Jose'} date={'June 2, 2020'} />
+        <EventNode source='1265427168286453760' mediaType='TWEET-VID' title='The Start' description={'The protests begin following the killing of George Floyd in Minneapolis'} date={'May 26, 2020'}/>
+        <EventNode source='https://www.instagram.com/p/CBOqUMqj82o/?igshid=75bs2m6apos8' mediaType='INSTAGRAM' title='San Jose' description={'Thousands of peaceful protestors gather in San Jose'} date={'June 2, 2020'} />
+        <EventNode source='1265427168286453760' mediaType='TWEET-VID' title='The Start' description={'The protests begin following the killing of George Floyd in Minneapolis'} date={'May 26, 2020'}/>
+        <EventNode source='https://www.instagram.com/p/CBOqUMqj82o/?igshid=75bs2m6apos8' mediaType='INSTAGRAM' title='San Jose' description={'Thousands of peaceful protestors gather in San Jose'} date={'June 2, 2020'} />
+      </div>
     </body>
   )
 }
