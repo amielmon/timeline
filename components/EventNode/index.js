@@ -1,20 +1,24 @@
 import React, { useState } from 'react'
+
+import InstagramEmbed from 'react-instagram-embed';
 import styles from './style.module.css'
 import { TwitterTweetEmbed, TwitterVideoEmbed } from 'react-twitter-embed';
 
-function EventNode({source, type, title, description, date}) {
+function EventNode({source, mediaType, title, description, date}) {
 
   const [isHovering, showContents] = useState(false)
 
   // Deciphers which component to use based on the type
   let media;
-  switch(type) {
+  switch(mediaType) {
     case 'TWEET':
       media = (<TwitterTweetEmbed tweetId={source} options={styles.media} />)
       break;
     case 'TWEET-VID':
       media = (<TwitterVideoEmbed id={source} />)
-      break;
+      break; 
+    case 'INSTAGRAM':
+      media = (<InstagramEmbed url={source} hideCaption={true} />)
   }
 
   // If there is a date, render it with the title
