@@ -1,7 +1,6 @@
 import React from 'react'
 
 import EventNode from '../EventNode'
-import fetch from 'isomorphic-unfetch'
 import styles from './style.module.css'
 
 export default function Timeline({data}) {
@@ -14,10 +13,4 @@ export default function Timeline({data}) {
     </div>
   )
 
-}
-
-Timeline.getInitialProps = async () => {
-  const res = await fetch('http://localhost:3000/api/events')
-  const json = await res.json()
-  return { data: json }
 }
