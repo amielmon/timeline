@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 
+import fetch from 'isomorphic-unfetch'
 import InstagramEmbed from 'react-instagram-embed';
 import styles from './style.module.css'
 import { TwitterTweetEmbed, TwitterVideoEmbed } from 'react-twitter-embed';

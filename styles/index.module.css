@@ -33,8 +33,3 @@
   color: white;
   font-size: 100px;
 }
-
-.timeline {
-  height: 100vh!important;
-  overflow-y: scroll;
-}
