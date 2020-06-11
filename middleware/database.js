@@ -1,6 +1,8 @@
 import { MongoClient } from 'mongodb';
 import nextConnect from 'next-connect';
 
+require('dotenv').config()
+
 const client = new MongoClient('mongodb+srv://amielmon:Pajarillaga99%21@bunch-fdal9.mongodb.net/timeline?retryWrites=true&w=majority', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
