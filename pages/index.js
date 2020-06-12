@@ -10,13 +10,14 @@ export default function Home({data}) {
   const aboutTitle = `George Floyd Protests\n`
   const text = `We can no longer trust the media to tell the people’s story. So we created a timeline to highlight the different stories people have shared during the Black Lives Matter protests following George Floyd’s death, so that our history is not rewritten or forgotten.`
   
+  data.sort((a,b) => new Date(a.date) - new Date(b.date))
+
   return (
     <body className={styles.page}>
       <Header />
       <div className={styles.about}>
         <div className={styles.bg}>
           <span className={styles.text} >
-            <EventNode title={aboutTitle} description={text} />
           </span>
         </div>
       </div>

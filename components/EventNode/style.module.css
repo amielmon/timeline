@@ -1,27 +1,75 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
 
-.eventContainer {
-  border: 2px solid white;
-  width: 25%;
+.container {
+  display: flex;
+  justify-content: center
 }
 
-.eventContainer .title {
-  text-align: center;
+.descriptionContainer {
+  width: 25%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.descriptionFrame {
+  border-radius: 16px;
+  position: relative;
+  width: 25vmin;
+  padding: 24px;
+  background-color: black;
+  height: min-content;
+  margin: 16px 0 16px 16px;
+  border: 1px solid green;
+  
+}
+
+.title {
   color: rgba(252, 226, 27);
   font-family: 'Playfair Display', serif;
-  font-size: 20px;
+  font-size: 36px;
+  line-height: 40px;
 }
 
-.eventContainer .description {
-  color: white;
-  font-size: 15px;
+.description {
+  color: red;
+  font-size: 18px;
 }
 
-.eventContainer .mediaContainer {
-  margin: 10px;
-  align-items: center;
+.timeline {
+  position: relative;
+  width: 24px;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0 40px;
+}
+
+.line {
+  width: 8px;
+  background: white;
+  display: flex;
+  height: 1000px;
   justify-content: center;
-} 
+}
 
-.eventContainer .media {
+.node {
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  background: white;
+  position: absolute;
+  cursor: pointer;
+
+}
+
+.mediaContainer {
+  width: 25%
+}
+
+.mediaFrame {
+  width: 100%;
+  height: min-content;
+  padding: 24px;
+  margin: 16px 16px 16px 0;
+  border: 1px solid green;
+  border-radius: 16px;
 }
