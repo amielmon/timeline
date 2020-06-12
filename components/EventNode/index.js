@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 
-import fetch from 'isomorphic-unfetch'
 import InstagramEmbed from 'react-instagram-embed';
 import styles from './style.module.css'
 import { TwitterTweetEmbed, TwitterVideoEmbed } from 'react-twitter-embed';
@@ -34,7 +33,7 @@ function EventNode({source, mediaType, title, description, date}) {
     </div>}
     <div className={styles.timeline}>
       <div className={styles.line}>
-        <div className={styles.node}  onMouseEnter={() => setShowEvent(true)} onMouseLeave={() => setShowEvent(false)}/>
+        <div className={styles.node}  onClick={() => setShowEvent(!showEvent)} />
       </div>
    </div>
    {showEvent &&

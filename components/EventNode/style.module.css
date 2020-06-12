@@ -3,12 +3,10 @@
 .container {
   display: flex;
   justify-content: center
-
 }
 
 .descriptionContainer {
-  border: 1px solid green;
-  width: 360px;
+  width: 25%;
 }
 
 .title {
