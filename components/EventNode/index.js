@@ -8,9 +8,7 @@ import styles from './style.module.css'
 
 function EventNode({source, mediaType, title, description, date}) {
 
-  const [ref, inView, entry] = useInView()
-
-  console.log('inView', inView)
+  const [ref, inView] = useInView({threshold: 0.5 })
 
   // Deciphers which component to use based on the type
   let media;
@@ -43,8 +41,8 @@ function EventNode({source, mediaType, title, description, date}) {
       </div>
     </div>}
     <div className={styles.timeline}>
-      <div className={styles.line}>
-        <div className={styles.node} ref={ref} />
+      <div className={styles.line} ref={ref} >
+        <div className={styles.node}/>
       </div>
    </div>
    {inView &&
