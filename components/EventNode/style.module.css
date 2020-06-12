@@ -7,16 +7,32 @@
 
 .descriptionContainer {
   width: 25%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.descriptionFrame {
+  border-radius: 16px;
+  position: relative;
+  width: 25vmin;
+  padding: 24px;
+  background-color: black;
+  height: min-content;
+  margin: 16px 0 16px 16px;
+  border: 1px solid green;
+  
 }
 
 .title {
   color: rgba(252, 226, 27);
   font-family: 'Playfair Display', serif;
-  font-size: 20px;
+  font-size: 36px;
+  line-height: 40px;
 }
 
 .description {
-  color: red
+  color: red;
+  font-size: 18px;
 }
 
 .timeline {
@@ -31,7 +47,7 @@
   width: 8px;
   background: white;
   display: flex;
-  height: 800px;
+  height: 1000px;
   justify-content: center;
 }
 
@@ -45,6 +61,15 @@
 
 }
 
-.media {
-  width: 25%;
+.mediaContainer {
+  width: 25%
+}
+
+.mediaFrame {
+  width: 100%;
+  height: min-content;
+  padding: 24px;
+  margin: 16px 16px 16px 0;
+  border: 1px solid green;
+  border-radius: 16px;
 }

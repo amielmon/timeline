@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
-
+import moment from 'moment'
 import InstagramEmbed from 'react-instagram-embed';
-import styles from './style.module.css'
 import { TwitterTweetEmbed, TwitterVideoEmbed } from 'react-twitter-embed';
+import styles from './style.module.css'
+
 
 function EventNode({source, mediaType, title, description, date}) {
 
@@ -22,14 +23,19 @@ function EventNode({source, mediaType, title, description, date}) {
   }
 
   // If there is a date, render it with the title
-  const titleText = date ? date + ': ' + title : title;
+  const dateValue = date && new Date(date)
+  const dateCopy = moment(dateValue).format('MMMM Do')
+  const titleCopy = dateCopy ? dateCopy + ': ' + title : title;
 
   return (
   <div className={styles.container}>
     {showEvent &&
     <div className={styles.descriptionContainer}>
-      <div className={styles.title}>{titleText}</div>
-      <div className={styles.description}>{description}</div>
+      <div className={styles.descriptionFrame}>
+        <div className={styles.title}>{titleCopy}</div>
+        <br/>
+        <div className={styles.description}>{description}</div>
+      </div>
     </div>}
     <div className={styles.timeline}>
       <div className={styles.line}>
@@ -37,8 +43,10 @@ function EventNode({source, mediaType, title, description, date}) {
       </div>
    </div>
    {showEvent &&
-    <div className={styles.media}>
+   <div className={styles.mediaContainer}>
+    <div className={styles.mediaFrame}>
       {media}
+    </div>
     </div>
    }
   </div>
