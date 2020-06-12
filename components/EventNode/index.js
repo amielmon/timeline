@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState, useRef} from 'react'
+import { useInView } from 'react-intersection-observer'
 import moment from 'moment'
 import InstagramEmbed from 'react-instagram-embed';
 import { TwitterTweetEmbed, TwitterVideoEmbed } from 'react-twitter-embed';
@@ -7,7 +8,9 @@ import styles from './style.module.css'
 
 function EventNode({source, mediaType, title, description, date}) {
 
-  const [showEvent, setShowEvent] = useState(false)
+  const [ref, inView, entry] = useInView()
+
+  console.log('inView', inView)
 
   // Deciphers which component to use based on the type
   let media;
@@ -27,9 +30,11 @@ function EventNode({source, mediaType, title, description, date}) {
   const dateCopy = moment(dateValue).format('MMMM Do')
   const titleCopy = dateCopy ? dateCopy + ': ' + title : title;
 
+
+
   return (
   <div className={styles.container}>
-    {showEvent &&
+    {inView &&
     <div className={styles.descriptionContainer}>
       <div className={styles.descriptionFrame}>
         <div className={styles.title}>{titleCopy}</div>
@@ -39,10 +44,10 @@ function EventNode({source, mediaType, title, description, date}) {
     </div>}
     <div className={styles.timeline}>
       <div className={styles.line}>
-        <div className={styles.node}  onClick={() => setShowEvent(!showEvent)} />
+        <div className={styles.node} ref={ref} />
       </div>
    </div>
-   {showEvent &&
+   {inView &&
    <div className={styles.mediaContainer}>
     <div className={styles.mediaFrame}>
       {media}
