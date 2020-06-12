@@ -1,27 +1,52 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
 
-.eventContainer {
-  border: 2px solid white;
-  width: 25%;
+.container {
+  display: flex;
+  justify-content: center
+
 }
 
-.eventContainer .title {
-  text-align: center;
+.descriptionContainer {
+  border: 1px solid green;
+  width: 360px;
+}
+
+.title {
   color: rgba(252, 226, 27);
   font-family: 'Playfair Display', serif;
   font-size: 20px;
 }
 
-.eventContainer .description {
-  color: white;
-  font-size: 15px;
+.description {
+  color: red
 }
 
-.eventContainer .mediaContainer {
-  margin: 10px;
-  align-items: center;
-  justify-content: center;
-} 
+.timeline {
+  position: relative;
+  width: 24px;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0 40px;
+}
 
-.eventContainer .media {
+.line {
+  width: 8px;
+  background: white;
+  display: flex;
+  height: 800px;
+  justify-content: center;
+}
+
+.node {
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  background: white;
+  position: absolute;
+  cursor: pointer;
+
+}
+
+.media {
+  width: 25%;
 }

@@ -16,7 +16,6 @@ export default function Home({data}) {
       <div className={styles.about}>
         <div className={styles.bg}>
           <span className={styles.text} >
-            <EventNode title={aboutTitle} description={text} />
           </span>
         </div>
       </div>

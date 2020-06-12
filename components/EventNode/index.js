@@ -7,7 +7,7 @@ import { TwitterTweetEmbed, TwitterVideoEmbed } from 'react-twitter-embed';
 
 function EventNode({source, mediaType, title, description, date}) {
 
-  const [isHovering, showContents] = useState(false)
+  const [showEvent, setShowEvent] = useState(false)
 
   // Deciphers which component to use based on the type
   let media;
@@ -26,14 +26,22 @@ function EventNode({source, mediaType, title, description, date}) {
   const titleText = date ? date + ': ' + title : title;
 
   return (
-  <div className={styles.eventContainer} onMouseEnter={() => showContents(true)} onMouseLeave={() => showContents(false)}>
-    <div className={styles.title}>{titleText}</div>
-    <div className={styles.description}>{description}</div>
-    {isHovering && 
-      <div className={styles.mediaContainer}>
-        {media}
-      </div> 
-    }
+  <div className={styles.container}>
+    {showEvent &&
+    <div className={styles.descriptionContainer}>
+      <div className={styles.title}>{titleText}</div>
+      <div className={styles.description}>{description}</div>
+    </div>}
+    <div className={styles.timeline}>
+      <div className={styles.line}>
+        <div className={styles.node}  onMouseEnter={() => setShowEvent(true)} onMouseLeave={() => setShowEvent(false)}/>
+      </div>
+   </div>
+   {showEvent &&
+    <div className={styles.media}>
+      {media}
+    </div>
+   }
   </div>
   )
 }
