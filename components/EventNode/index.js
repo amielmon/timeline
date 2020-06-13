@@ -32,26 +32,23 @@ function EventNode({source, mediaType, title, description, date}) {
 
   return (
   <div className={styles.container}>
-    {inView &&
     <div className={styles.descriptionContainer}>
-      <div className={styles.descriptionFrame}>
+      <div className={inView ? styles.descriptionFrame : styles.descriptionFrameOut}>
         <div className={styles.title}>{titleCopy}</div>
         <br/>
         <div className={styles.description}>{description}</div>
       </div>
-    </div>}
+    </div>
     <div className={styles.timeline}>
       <div className={styles.line} ref={ref} >
         <div className={styles.node}/>
       </div>
    </div>
-   {inView &&
    <div className={styles.mediaContainer}>
-    <div className={styles.mediaFrame}>
+    <div className={inView ? styles.mediaFrame : styles.mediaFrameOut}>
       {media}
     </div>
     </div>
-   }
   </div>
   )
 }
