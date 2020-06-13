@@ -25,7 +25,7 @@ function EventNode({source, mediaType, title, description, date}) {
 
   // If there is a date, render it with the title
   const dateValue = date && new Date(date)
-  const dateCopy = moment(dateValue).format('MMMM Do')
+  const dateCopy = moment(dateValue).utc().format('MMMM Do')
   const titleCopy = dateCopy ? dateCopy + ': ' + title : title;
 
 
