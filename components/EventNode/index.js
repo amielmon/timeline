@@ -26,15 +26,13 @@ function EventNode({source, mediaType, title, description, date}) {
   // If there is a date, render it with the title
   const dateValue = date && new Date(date)
   const dateCopy = moment(dateValue).utc().format('MMMM Do')
-  const titleCopy = dateCopy ? dateCopy + ': ' + title : title;
-
-
 
   return (
   <div className={styles.container}>
     <div className={styles.descriptionContainer}>
       <div className={inView ? styles.descriptionFrame : styles.descriptionFrameOut}>
-        <div className={styles.title}>{titleCopy}</div>
+        <div className={styles.date}>{dateCopy + ': '}</div>
+        <div className={styles.title}>{title}</div>
         <br/>
         <div className={styles.description}>{description}</div>
       </div>

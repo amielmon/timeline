@@ -40,15 +40,22 @@
   animation-duration: 0.5s;
 }
 
+.date {
+  color: #fce21b;
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  line-height: 40px;
+}
+
 .title {
-  color: rgba(252, 226, 27);
+  color:  rgba(74,	68,	242);
   font-family: 'Playfair Display', serif;
   font-size: 36px;
   line-height: 40px;
 }
 
 .description {
-  color: #C20008;
+  color: #f0ead6;
   font-size: 18px;
 }
 
