@@ -1,0 +1,25 @@
+.container {
+  position:fixed;
+  width: 30%;
+  top: 53%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.content {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.resource {
+  width: 100%;
+  height: auto;
+}
+
+.close {
+  width: 5%;
+  height: auto;
+  cursor: pointer;
+  margin-bottom: 5px;
+  align-self: flex-end;
+}

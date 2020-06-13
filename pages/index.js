@@ -1,9 +1,9 @@
 import React from 'react';
 
-import EventNode from '../components/EventNode'
 import fetch from 'isomorphic-unfetch'
 import Header from '../components/Header'
 import styles from '../styles/index.module.css'
+import Resources from '../components/Resources'
 import Timeline from '../components/Timeline'
 
 export default function Home({data}) {
@@ -13,15 +13,19 @@ export default function Home({data}) {
   data.sort((a,b) => new Date(a.date) - new Date(b.date))
 
   return (
-    <body className={styles.page}>
+    <body id='page' className={styles.page}>
       <Header />
       <div className={styles.about}>
         <div className={styles.bg}>
-          <span className={styles.text} >
-          </span>
+          <span className={styles.text} />
         </div>
       </div>
-      <Timeline data={data} />
+      <div id='timeline' className={styles.timeline}>
+        <Timeline data={data} />
+      </div>
+      <div id='resources'>
+        <Resources />
+      </div>
     </body>
   )
 }

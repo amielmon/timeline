@@ -30,6 +30,8 @@
   margin-right: 50px;
 }
 
-.subtitle:hover {
+.subtitle:hover, .active {
   color: rgba(74,	68,	242, 0.8);
 }
+
+
