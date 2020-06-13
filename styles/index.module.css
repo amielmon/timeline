@@ -3,7 +3,7 @@
 }
 
 .about .bg {
-  background: url('../photos/Background.gif');
+  /* background: url('../photos/Background.gif'); */
   height: 100vh!important;
   background-position: center;
   background-repeat: no-repeat;

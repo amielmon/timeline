@@ -107,6 +107,55 @@
   animation-duration: 0.5s;
 }
 
+.mediaFrame > div > .twitter-tweet .twitter-tweet-rendered {
+  min-width: 0;
+  color: green;
+  
+}
+
+.tweetVid {
+  min-width: 0px;
+  width: 1000px;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .timeline {
+    margin: 0 20px;
+  }
+
+  .container {
+    justify-content: normal;
+  }
+  .descriptionFrame {
+    width: 20vmin;
+
+  }
+
+  .title {
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  .mediaFrame {
+    padding: 0;
+    margin-top: 36px;
+
+  }
+  .descriptionContainer {
+    padding: 24px;
+  }
+  .mediaContainer {
+    width: 15%;
+  }
+
+
+  .mediaFrame > div > .twitter-tweet {
+    min-width: 0;
+
+  }
+}
+
 @keyframes rightFadeIn {
   0% {
     position: relative;

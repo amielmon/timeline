@@ -17,7 +17,7 @@ function EventNode({source, mediaType, title, description, date}) {
       media = (<TwitterTweetEmbed tweetId={source} options={styles.media} />)
       break;
     case 'TWEET-VID':
-      media = (<TwitterVideoEmbed id={source} />)
+      media = (<TwitterVideoEmbed id={source} className={styles.tweetVid} />)
       break; 
     case 'INSTAGRAM':
       media = (<InstagramEmbed url={source} hideCaption={true} />)
