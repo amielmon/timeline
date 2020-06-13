@@ -1,7 +1,7 @@
 import React from 'react';
+import fetch from 'isomorphic-unfetch'
 
 import EventNode from '../components/EventNode'
-import fetch from 'isomorphic-unfetch'
 import Header from '../components/Header'
 import styles from '../styles/index.module.css'
 import Timeline from '../components/Timeline'
