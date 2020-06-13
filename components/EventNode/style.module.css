@@ -25,11 +25,20 @@
   animation-duration: 0.5s;
 }
 
-
-
-
-
-
+.descriptionFrameOut {
+  border-radius: 16px;
+  position: relative;
+  width: 25vmin;
+  padding: 24px;
+  background-color: black;
+  z-index: 0;
+  height: min-content;
+  margin: 16px 0 16px 16px;
+  opacity: 0;
+  animation-name: leftFadeOut;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.5s;
+}
 
 .title {
   color: rgba(252, 226, 27);
@@ -81,6 +90,19 @@
   margin: 16px 16px 16px 0;
   border-radius: 16px;
   animation-name: leftFadeIn;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.5s;
+}
+
+.mediaFrameOut {
+  position: relative;
+  width: 100%;
+  height: min-content;
+  padding: 24px;
+  margin: 16px 16px 16px 0;
+  border-radius: 16px;
+  opacity: 0;
+  animation-name: rightFadeOut;
   animation-timing-function: ease-in-out;
   animation-duration: 0.5s;
 }
@@ -156,5 +178,83 @@
   100% {
     position: relative;
     opacity: 1;
+  }
+}
+
+@keyframes rightFadeOut {
+  0% {
+    position: relative;
+    opacity: 1;
+  }
+
+  25% {
+    position: relative;
+    left: -0.5rem;
+    opacity: 0.75;
+  }
+
+  50% {
+    position: relative;
+    left: -1rem;
+    opacity: 0.5;
+  }
+
+  75% {
+    position: relative;
+    left: -2rem;
+    opacity: 0.4;
+  }
+
+  90% {
+    position: relative;
+    left: -3rem;
+    opacity: 0.25;
+  }
+
+  100% {
+    position: relative;
+    left: -4rem;
+    display: none;
+    opacity: 0;
+  }
+}
+
+
+
+@keyframes leftFadeOut {
+  0% {
+    position: relative;
+    opacity: 1;
+  }
+
+  25% {
+    position: relative;
+    right: -0.5rem;
+    opacity: 0.75;
+  }
+
+  50% {
+    position: relative;
+    right: -1rem;
+    opacity: 0.5;
+  }
+
+  75% {
+    position: relative;
+    right: -2rem;
+    opacity: 0.4;
+  }
+
+  90% {
+    position: relative;
+    right: -3rem;
+    opacity: 0.25;
+  }
+
+  100% {
+    position: relative;
+    right: -4rem;
+    display: none;
+    opacity: 0;
   }
 }
