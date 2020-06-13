@@ -17,11 +17,19 @@
   width: 25vmin;
   padding: 24px;
   background-color: black;
+  z-index: 0;
   height: min-content;
   margin: 16px 0 16px 16px;
-  border: 1px solid green;
-  
+  animation-name: rightFadeIn;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.5s;
 }
+
+
+
+
+
+
 
 .title {
   color: rgba(252, 226, 27);
@@ -66,10 +74,87 @@
 }
 
 .mediaFrame {
+  position: relative;
   width: 100%;
   height: min-content;
   padding: 24px;
   margin: 16px 16px 16px 0;
-  border: 1px solid green;
   border-radius: 16px;
+  animation-name: leftFadeIn;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.5s;
+}
+
+@keyframes rightFadeIn {
+  0% {
+    position: relative;
+    right: -4rem;
+    opacity: 0;
+  }
+
+  25% {
+    position: relative;
+    right: -3rem;
+    opacity: 0.25;
+  }
+
+  50% {
+    position: relative;
+    right: -2rem;
+    opacity: 0.4;
+  }
+
+  75% {
+    position: relative;
+    right: -1rem;
+    opacity: 0.5;
+  }
+
+  90% {
+    position: relative;
+    right: -0.5rem;
+    opacity: 0.75;
+  }
+
+  100% {
+    position: relative;
+    opacity: 1;
+  }
+}
+
+@keyframes leftFadeIn {
+  0% {
+    position: relative;
+    left: -4rem;
+    opacity: 0;
+  }
+
+  25% {
+    position: relative;
+    left: -3rem;
+    opacity: 0.25;
+  }
+
+  50% {
+    position: relative;
+    left: -2rem;
+    opacity: 0.4;
+  }
+
+  75% {
+    position: relative;
+    left: -1rem;
+    opacity: 0.5;
+  }
+
+  90% {
+    position: relative;
+    left: -0.5rem;
+    opacity: 0.75;
+  }
+
+  100% {
+    position: relative;
+    opacity: 1;
+  }
 }

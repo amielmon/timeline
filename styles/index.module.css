@@ -26,10 +26,10 @@
 
 }
 .page::-webkit-scrollbar-thumb {
-  background: white; 
+  background: black; 
 }
 
 .text {
-  color: white;
+  color: black;
   font-size: 100px;
 }
