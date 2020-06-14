@@ -1,25 +1,26 @@
 import React, { useState } from 'react'
 import ResourceModal from './ResourceModal'
 import styles from './style.module.css'
+import { IMAGE_PATH } from './constants'
 
-export default function Resources() {
+export default function Resources({data}) {
 
-  const [showResource, toggleShow] = useState(false);
+  const [showResource, setShowResource] = useState(false);
+  const [resource, setResource] = useState('');
 
-  const handleClick = () => {
-    toggleShow(!showResource);
-  }
+  const resources = data.map((r) => (
+    <div className={styles.neumorphic}> 
+      <img className={styles.image} src={IMAGE_PATH[`resource${r.imageId}`]} onClick={() => {setShowResource(!showResource); setResource(r.src)}} />
+    </div> ))
 
   return (
   <div className={styles.container}>
     <span className={styles.title}>Resources</span>
     <div className={styles.imagesContainer}>
-      <div className={styles.neumorphic}>
-        <img className={styles.image} src={require('../../public/photos/resource.jpg')} onClick={handleClick}/>
-      </div>
+      {resources}
     </div>
     {showResource && 
-      <ResourceModal handleClose={handleClick} show={showResource}/>
+      <ResourceModal resource={resource} handleClose={() => setShowResource(!showResource)} show={showResource}/>
     }
   </div>
   )

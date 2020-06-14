@@ -6,11 +6,11 @@ import styles from '../styles/index.module.css'
 import Resources from '../components/Resources'
 import Timeline from '../components/Timeline'
 
-export default function Home({data}) {
+export default function Home({resEvents, resResources}) {
   const aboutTitle = `George Floyd Protests\n`
   const text = `We can no longer trust the media to tell the people’s story. So we created a timeline to highlight the different stories people have shared during the Black Lives Matter protests following George Floyd’s death, so that our history is not rewritten or forgotten.`
   
-  data.sort((a,b) => new Date(a.date) - new Date(b.date))
+  resEvents.sort((a,b) => new Date(a.date) - new Date(b.date))
 
   return (
     <body id='page' className={styles.page}>
@@ -21,17 +21,20 @@ export default function Home({data}) {
         </div>
       </div>
       <div id='timeline' className={styles.timeline}>
-        <Timeline data={data} />
+        <Timeline data={resEvents} />
       </div>
       <div id='resources'>
-        <Resources />
+        <Resources data={resResources} />
       </div>
     </body>
   )
 }
 
 Home.getInitialProps = async () => {
-  const res = await fetch('http://localhost:3000/api/events')
-  const json = await res.json()
-  return { data: json }
+  const [resEvents, resResources] = await Promise.all([
+    fetch('http://localhost:3000/api/events').then(r => r.json()),
+    fetch('http://localhost:3000/api/resources').then(r => r.json())
+  ]);
+
+  return { resEvents, resResources };
 }

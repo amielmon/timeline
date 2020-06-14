@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './style.module.css'
 import InstagramEmbed from 'react-instagram-embed';
 
-export default function ResourceModal({handleClose, show}) {
+export default function ResourceModal({resource, handleClose, show}) {
 
   if (show) {
     return (
@@ -10,7 +10,7 @@ export default function ResourceModal({handleClose, show}) {
         <div className={styles.content}>
           <img className={styles.close} src={require('../../../public/photos/close.png')} onClick={handleClose}/>
           <div className={styles.resource} >
-            <InstagramEmbed url={'https://www.instagram.com/p/CBD7DL4BjFc/'} hideCaption={true} />
+            <InstagramEmbed url={resource} hideCaption={true} />
           </div>
         </div>
       </div>
