@@ -1,0 +1,47 @@
+.container {
+  width: 100%;
+  background-color: #e0e0e0;
+}
+
+.container .title {
+  color: rgba(74,	68,	242, 0.8);
+  font-family: 'Playfair Display', serif;
+  font-size: 50px;
+  margin-left: 30px;
+  margin-bottom: 30px;
+}
+
+.imagesContainer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+.image {
+  width: 100%;
+  cursor: pointer;
+}
+
+.neumorphic {
+  box-shadow: 12px 12px 24px 0 rgba(0, 0, 0, 0.2),
+    -12px -12px 24px 0 rgba(255, 255, 255, 0.5);
+  font-size: 5rem;
+  width: 20%;
+  border-radius: 40px;
+  overflow: hidden;
+  padding: 1.3rem;
+  display: flex;
+  box-sizing: border-box;
+}
+
+.neumorphic:active {
+  box-sizing: border-box;
+  box-shadow: inset 6px 6px 10px 0 rgba(0, 0, 0, 0.2),
+    inset -6px -6px 10px 0 rgba(255, 255, 255, 0.5);
+  
+}
+
+.resource {
+  width: 30%;
+  height: auto;
+}

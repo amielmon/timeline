@@ -15,7 +15,14 @@
   font-size: 20px;
 }
 
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
 .page {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
   background: black;
   margin: 0;
   scrollbar-color: black black;
@@ -31,4 +38,8 @@
 .text {
   color: black;
   font-size: 100px;
+}
+
+.timeline {
+  padding-top: 75px;
 }
