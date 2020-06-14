@@ -15,7 +15,7 @@ export default function Resources({data}) {
 
   return (
   <div className={styles.container}>
-    <span className={styles.title}>Resources</span>
+    <div className={styles.title}>Resources</div>
     <div className={styles.imagesContainer}>
       {resources}
     </div>
