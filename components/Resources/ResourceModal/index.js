@@ -25,8 +25,8 @@ export default function ResourceModal({resource, handleClose, show}) {
     };
   }, [show, modalRef, handleClose])
 
-  if (show) {
     return (
+      show &&
       <div className={styles.container} ref={modalRef}>
         <div className={styles.content}>
           <img className={styles.close} src={require('../../../public/photos/close.png')} onClick={handleClose}/>
@@ -36,7 +36,4 @@ export default function ResourceModal({resource, handleClose, show}) {
         </div>
       </div>
     );
-  } else {
-    return (<div />);
-  }
 };

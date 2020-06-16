@@ -15,7 +15,7 @@ function Header() {
       <span className={styles.links}>
         <a className={styles.subtitle} href={'#timeline'}>timeline</a>
         <a className={styles.subtitle} href={'#resources'}>resources</a>
-        <span className={styles.subtitle}>link 3</span>
+        <a className={styles.subtitle} href={'#contribute'}>contribute</a>
       </span>
     </div>
   )
