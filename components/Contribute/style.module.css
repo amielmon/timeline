@@ -1,6 +1,6 @@
 .container {
   width: 100%;
-  background: #a8a696;
+  background: #9d96a8;
 }
 
 .title {
@@ -24,7 +24,7 @@
   padding: 36px;
   box-sizing: border-box;
   box-shadow: 12px 12px 24px 0 rgba(0, 0, 0, 0.2),
-    -12px -12px 24px 0 rgba(255, 255, 255, 0.5);
+    -12px -12px 24px 0 rgba(203, 194, 218, 0.5);
 }
 
 .formTitle {
@@ -52,7 +52,7 @@
   display: flex;
   box-sizing: border-box;
   box-shadow: inset 6px 6px 10px 0 rgba(0, 0, 0, 0.2),
-    inset -6px -6px 10px 0 rgba(255, 255, 255, 0.5);
+    inset -6px -6px 10px 0 rgba(240, 235, 221, 0.5);
 
 
 }
