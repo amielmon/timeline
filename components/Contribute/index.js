@@ -13,19 +13,19 @@ function Contribute() {
           <div className={styles.form}>
             <div className={styles.formTitle}>Submit events or resources</div>
             <div className={styles.inputWrapper}>
-                <User fill={'#9d96a8'}/>
+                <User fill={'#ad1010'}/>
                 <input placeholder='Enter name (optional)'/>
               </div>
               <div className={styles.inputWrapper}>
-                <Email fill={'#9d96a8'}/>
+                <Email fill={'#ad1010'}/>
                 <input placeholder='Enter email (optional)'/>
               </div>
               <div className={styles.inputWrapper}>
-                <Timeline fill={'#9d96a8'}/>
+                <Timeline fill={'#ad1010'}/>
                 <input placeholder='Event links'/>
               </div>
               <div className={styles.inputWrapper}>
-                <Resource fill={'#9d96a8'}/>
+                <Resource fill={'#ad1010'}/>
                 <input placeholder='Resource links'/>
               </div>
           </div>
