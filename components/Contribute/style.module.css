@@ -63,6 +63,6 @@
 }
 
 .inputWrapper > input::placeholder {
-  color: rgba(105,103,94, 0.8);
+  color: rgba(105,103,94, 0.5);
 }
 
