@@ -5,20 +5,30 @@ import Header from '../components/Header'
 import styles from '../styles/index.module.css'
 import Resources from '../components/Resources'
 import Timeline from '../components/Timeline'
+import { useInView } from 'react-intersection-observer'
+
+const about = `Social media has played a huge role in informing each other, organizing our communties, 
+               creating social awareness, and bringing justice. We hope to keep the stories shared from the protests 
+               following the murder of George Floyd relevant through our dynamic timeline, and make collections of 
+               informative posts accessible in our growing resources grid. Contributions to our collection can be made
+               down below.`
+const warning = ` Contains graphic content, such as violence and blood.`;
 
 export default function Home({resEvents, resResources}) {
-  const aboutTitle = `George Floyd Protests\n`
-  const text = `We can no longer trust the media to tell the people’s story. So we created a timeline to highlight the different stories people have shared during the Black Lives Matter protests following George Floyd’s death, so that our history is not rewritten or forgotten.`
-  
   resEvents.sort((a,b) => new Date(a.date) - new Date(b.date))
+
+  const [ref, inView] = useInView({threshold: 0.5})
 
   return (
     <body id='page' className={styles.page}>
       <Header />
-      <div className={styles.about}>
-        <div className={styles.bg}>
-          <span className={styles.text} />
-        </div>
+      <div className={inView ? styles.about : styles.aboutOut} ref={ref}>
+        <span className={styles.text}>BLACK LIVES MATTER.</span>
+        <span className={styles.aboutText}>{about}</span>
+        <span className={styles.warningText}>
+          Warning:
+          <span>{warning}</span>
+        </span>
       </div>
       <div id='timeline' className={styles.timeline}>
         <Timeline data={resEvents} />
