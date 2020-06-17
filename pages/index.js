@@ -5,6 +5,7 @@ import Header from '../components/Header'
 import styles from '../styles/index.module.css'
 import Resources from '../components/Resources'
 import Timeline from '../components/Timeline'
+import Contribute from '../components/Contribute'
 import { useInView } from 'react-intersection-observer'
 
 const about = `Social media has played a huge role in informing each other, organizing our communties, 
@@ -35,6 +36,9 @@ export default function Home({resEvents, resResources}) {
       </div>
       <div id='resources'>
         <Resources data={resResources} />
+      </div>
+      <div id='contribute'>
+        <Contribute />
       </div>
     </body>
   )

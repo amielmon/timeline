@@ -20,7 +20,7 @@ export default function Resources({data}) {
       {resources}
     </div>
     {showResource && 
-      <ResourceModal resource={resource} handleClose={() => setShowResource(!showResource)} show={showResource}/>
+      <ResourceModal resource={resource} handleClose={() => setShowResource(!showResource)} show={showResource} />
     }
   </div>
   )
