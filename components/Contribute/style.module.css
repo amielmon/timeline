@@ -1,6 +1,7 @@
 .container {
   width: 100%;
   background-color: #e0e0e0;
+  padding-bottom: 30px; 
 }
 
 .title {
@@ -65,4 +66,34 @@
 .inputWrapper > input::placeholder {
   color: rgba(105,103,94, 0.5);
 }
+
+.submitContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.submit {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  padding: 16px;
+  border-radius: 40px;
+  background: #ad1010;
+  box-shadow: 12px 12px 24px 0 rgba(0, 0, 0, 0.2),
+  -12px -12px 24px 0 rgba(255, 255, 255, 0.5);
+}
+
+.submit:active {
+  box-shadow: inset 12px 12px 24px 0 rgba(0, 0, 0, 0.2),
+  inset -12px -12px 24px 0 rgba(255, 255, 255, 0.5);
+
+}
+
+.submit > span {
+  font-size: 24px;
+  color: #e0e0e0;
+  user-select: none;
+}
+
 

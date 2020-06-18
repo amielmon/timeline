@@ -12,12 +12,4 @@ handler.get(async (req, res) => {
     res.json(doc);
 });
 
-handler.post(async (req, res) => {
-  let data = req.body;
-  data = JSON.parse(data);
-  let doc = await req.db.collection('submittedResources').updateOne({src: data.src}, {$set:data}, {upsert: true})
-
-  res.json({message: 'ok'});
-})
-
 export default handler;
