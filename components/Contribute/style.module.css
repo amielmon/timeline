@@ -1,7 +1,8 @@
 .container {
   width: 100%;
   background-color: #e0e0e0;
-  padding-bottom: 30px; 
+  padding-bottom: 30px;
+  padding-top: 60px;
 }
 
 .title {
@@ -45,7 +46,7 @@
   box-sizing: border-box;
   margin-bottom: 24px;
   box-shadow: inset 6px 6px 10px 0 rgba(0, 0, 0, 0.2),
-    inset -6px -6px 10px 0 rgba(255, 255, 255, 0.5);
+    inset -6px -6px 10px 0 rgba(236, 235, 235, 0.5);
 }
 
 .inputWrapper > input {
@@ -97,11 +98,10 @@
 
 .submitted > span {
   font-size: 24px;
+  font-family: 'Playfair Display', serif;
   color: #e0e0e0;
   user-select: none;
 }
-
-
 
 .submit {
   cursor: pointer;
@@ -122,6 +122,7 @@
 
 .submit > span {
   font-size: 24px;
+  font-family: 'Playfair Display', serif;
   color: #e0e0e0;
   user-select: none;
 }
@@ -137,4 +138,23 @@
   width: fit-content;
 }
 
+@media only screen and (max-width: 600px) {
+
+  .title {
+    font-size: 40px;
+    margin-bottom: 25px;
+  }
+
+  .form {
+    width: 90%;
+  }
+
+  .formTitle {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 24px;
+  }
+
+
+}
 

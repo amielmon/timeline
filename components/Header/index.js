@@ -10,7 +10,7 @@ function Header() {
       <span className={styles.title} 
             onMouseEnter={() => changeText(false)}
             onMouseLeave={() => changeText(true)} >
-        {isTitle ? `TBD` : `BLACK LIVES MATTER`}
+        {isTitle ? `Timeline of a Revolution` : `BLACK LIVES MATTER`}
       </span>
       <span className={styles.links}>
         <a className={styles.subtitle} href={'#timeline'}>timeline</a>

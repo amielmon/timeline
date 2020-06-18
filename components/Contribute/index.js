@@ -34,6 +34,11 @@ function Contribute() {
       setShowSubmissionError(true)
     } else {
       setSubmitted(true)
+      // clear the form when the user submits
+      setName('')
+      setEmail('')
+      setEventLinks('')
+      setResourceLinks('')
       const res = await fetch('http://localhost:3000/api/events', {
         method: 'post',
         body: JSON.stringify({name: name, email: email, eventLinks: eventLinks, resourceLinks: resourceLinks})
