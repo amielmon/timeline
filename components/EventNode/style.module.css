@@ -275,3 +275,25 @@
     width: 50vmin;
   }
 }
+@media screen and (max-device-width: 600px) {
+  .date {
+    font-size: 50px;
+    margin-bottom: 8px;
+  }
+
+  .title {
+    font-size: 40px;
+  }
+
+  .description {
+    font-size: 30px;
+  }
+  .descriptionFrame {
+    width: 50vmin;
+  }
+  
+  .descriptionFrameOut {
+    width: 50vmin;
+  }
+
+}
