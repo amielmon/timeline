@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import styles from './style.module.css'
 import User from '../Icons/User'
 import Email from '../Icons/Email'
@@ -12,7 +12,7 @@ function Contribute() {
   const [resourceLinks, setResourceLinks] = useState('')
   const [isValidEmail, setIsValidEmail] = useState(false)
   const [showEmailError, setShowEmailError] = useState(false)
-  const [submitError, setSubmitError] = useState(false)
+  const [showSubmissionError, setShowSubmissionError] = useState(false)
   const [canShowName, setCanShowName] = useState(false)
   const [submitted, setSubmitted] = useState(false)
   
@@ -28,9 +28,12 @@ function Contribute() {
   }
 
   const handleSubmit = async () => {
-    if ((email && !isValidEmail) || (!eventLinks && !resourceLinks)) {
-      setSubmitError(true)
+    if (submitted || (email && !isValidEmail)) {
+      return
+    } else if (!eventLinks && !resourceLinks) {
+      setShowSubmissionError(true)
     } else {
+      setSubmitted(true)
       const res = await fetch('http://localhost:3000/api/events', {
         method: 'post',
         body: JSON.stringify({name: name, email: email, eventLinks: eventLinks, resourceLinks: resourceLinks})
@@ -38,11 +41,23 @@ function Contribute() {
     }
   }
 
+  // Remove error when event link or resource link added
+  useEffect(() => {
+    if (eventLinks || resourceLinks) {
+      setShowSubmissionError(false)
+    }
+  }, [eventLinks, resourceLinks])
+
   // Timeout to allow resubmission
+  useEffect(() => {
+    setTimeout(() => setSubmitted(false), 5000)
+  }, [submitted])
+
+  
 
   console.log('isValidEmail', isValidEmail)
   console.log('showEmailError', showEmailError)
-  console.log('submitError', submitError)
+  console.log('showSubmissionError', showSubmissionError)
   console.log('name', name)
   console.log('email', email)
   console.log('eventLinks', eventLinks)
@@ -62,19 +77,23 @@ function Contribute() {
               <div className={styles.inputWrapper}>
                 <Email fill={'#ad1010'}/>
                 <input placeholder='Email (optional)'  value={email} onBlur={() => validateEmail(email)} onChange={(e) => setEmail(e.target.value)}/>
+                {showEmailError && <span className={styles.emailError}>Please enter a valid email address</span>}
               </div>
               <div className={styles.inputWrapper}>
                 <Timeline fill={'#ad1010'}/>
-                <input placeholder='Event links'  value={eventLinks} onChange={(e) => setEventLinks(e.target.value)}/>
+                <input placeholder='Event links'  value={eventLinks} onChange={(e) => {setEventLinks(e.target.value);}}/>
               </div>
               <div className={styles.inputWrapper}>
                 <Resource fill={'#ad1010'}/>
                 <input placeholder='Resource links'  value={resourceLinks} onChange={(e) => setResourceLinks(e.target.value)}/>
               </div>
-              <div className={styles.submitContainer}>
-                <div className={styles.submit} onClick={handleSubmit}>
-                  <span>Submit</span>
+              <div className={styles.submissionContainer}>
+                <div className={styles.submitButtonContainer}>
+                  <div className={submitted ? styles.submitted : styles.submit} onClick={handleSubmit}>
+                    <span>{submitted ? 'Thank you!' : 'Submit'}</span>
                   </div>
+                  {showSubmissionError && <div className={styles.submissionError}><span>Please enter a resource or event before submitting</span></div>}
+                </div>
                 <div className={styles.nameCheckbox}/>
               </div>
           </form>
