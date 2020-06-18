@@ -15,7 +15,7 @@ handler.get(async (req, res) => {
 handler.post(async (req, res) => {
   let data = req.body;
   data = JSON.parse(data);
-  let doc = await req.db.collection('submittedEvents').updateOne({src: data.src}, {$set:data}, {upsert: true})
+  let doc = await req.db.collection('submittedEvents').insert(data)
 
   res.json({message: 'ok'});
 })

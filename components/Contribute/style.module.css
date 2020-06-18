@@ -1,6 +1,8 @@
 .container {
   width: 100%;
   background-color: #e0e0e0;
+  padding-bottom: 30px;
+  padding-top: 60px;
 }
 
 .title {
@@ -35,6 +37,7 @@
 }
 
 .inputWrapper {
+  position: relative;
   border: none;
   border-radius: 40px;
   overflow: hidden;
@@ -43,7 +46,7 @@
   box-sizing: border-box;
   margin-bottom: 24px;
   box-shadow: inset 6px 6px 10px 0 rgba(0, 0, 0, 0.2),
-    inset -6px -6px 10px 0 rgba(255, 255, 255, 0.5);
+    inset -6px -6px 10px 0 rgba(236, 235, 235, 0.5);
 }
 
 .inputWrapper > input {
@@ -64,5 +67,94 @@
 
 .inputWrapper > input::placeholder {
   color: rgba(105,103,94, 0.5);
+}
+
+.submissionContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.submitButtonContainer {
+  width: 50%
+}
+
+.submissionError {
+  font-family: 'Playfair Display', serif;
+  color: #ad1010;
+  display: flex;
+  justify-content: center
+}
+
+.submitted {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  padding: 16px;
+  border-radius: 40px;
+  background: #69675e;
+  box-shadow: 12px 12px 24px 0 rgba(0, 0, 0, 0.2),
+  -12px -12px 24px 0 rgba(255, 255, 255, 0.5);
+}
+
+.submitted > span {
+  font-size: 24px;
+  font-family: 'Playfair Display', serif;
+  color: #e0e0e0;
+  user-select: none;
+}
+
+.submit {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  padding: 16px;
+  border-radius: 40px;
+  background: #ad1010;
+  box-shadow: 12px 12px 24px 0 rgba(0, 0, 0, 0.2),
+  -12px -12px 24px 0 rgba(255, 255, 255, 0.5);
+}
+
+.submit:active {
+  box-shadow: inset 12px 12px 24px 0 rgba(0, 0, 0, 0.2),
+  inset -12px -12px 24px 0 rgba(255, 255, 255, 0.5);
+}
+
+
+.submit > span {
+  font-size: 24px;
+  font-family: 'Playfair Display', serif;
+  color: #e0e0e0;
+  user-select: none;
+}
+
+.emailError {
+  color: #ad1010;
+  background: #e0e0e0;
+  font-family: 'Playfair Display', serif;
+  width: 50%;
+  position: absolute;
+  left: 65%;
+  top: 33%;
+  width: fit-content;
+}
+
+@media only screen and (max-width: 600px) {
+
+  .title {
+    font-size: 40px;
+    margin-bottom: 25px;
+  }
+
+  .form {
+    width: 90%;
+  }
+
+  .formTitle {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 24px;
+  }
+
+
 }
 
