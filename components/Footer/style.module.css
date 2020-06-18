@@ -1,0 +1,45 @@
+.mainContainer {
+  width: 100%;
+  background-color: #69675e;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 30px 0px;
+}
+
+.message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  color: #f0ead6;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact {
+  font-family: 'Playfair Display', serif;
+  font-size: 25px;
+  color: black;
+}
+
+.github {
+  margin: 5px;
+  margin-bottom: -10px;
+}
+
+.linkedIn {
+  margin-bottom: -12px;
+}
+
+.text {
+  margin: 3px 0px;
+  font-family: 'Playfair Display', serif;
+  color: #f0ead6;
+  font-size: 15px;
+}

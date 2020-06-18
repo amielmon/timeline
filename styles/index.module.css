@@ -40,6 +40,7 @@
 }
 
 .page {
+  /* overflow-y: scroll; */
   scroll-behavior: smooth;
   background: black;
   margin: 0;
