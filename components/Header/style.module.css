@@ -34,10 +34,4 @@
   color: #4A44F2;
 }
 
-@media only screen and (max-width: 600px) {
-  .container {
-    display: none;
-  }
-}
-
 

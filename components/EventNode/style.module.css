@@ -265,13 +265,3 @@
     opacity: 0;
   }
 }
-
-@media only screen and (max-width: 600px) {
-  .descriptionFrame {
-    width: 50vmin;
-  }
-  
-  .descriptionFrameOut {
-    width: 50vmin;
-  }
-}

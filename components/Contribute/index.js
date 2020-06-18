@@ -15,7 +15,7 @@ function Contribute() {
   const [showSubmissionError, setShowSubmissionError] = useState(false)
   const [canShowName, setCanShowName] = useState(false)
   const [submitted, setSubmitted] = useState(false)
-
+  
   const validateEmail = (email) => {
     const regexp = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
     if (!email || regexp.test(email)) {
@@ -34,11 +34,6 @@ function Contribute() {
       setShowSubmissionError(true)
     } else {
       setSubmitted(true)
-      // clear the form when the user submits
-      setName('')
-      setEmail('')
-      setEventLinks('')
-      setResourceLinks('')
       const res = await fetch('http://localhost:3000/api/events', {
         method: 'post',
         body: JSON.stringify({name: name, email: email, eventLinks: eventLinks, resourceLinks: resourceLinks})

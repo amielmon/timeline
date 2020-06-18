@@ -1,5 +1,5 @@
 .about {
-  background-color: rbga(0, 0, 0, 0.8);
+  background-color: rbga(0, 0, 0, 0,8);
   height: 100vh!important;
   display: flex;
   flex-direction: column;
@@ -11,7 +11,7 @@
 }
 
 .aboutOut {
-  background-color: rbga(0, 0, 0, 0.8);
+  background-color: rbga(0, 0, 0, 0,8);
   height: 100vh!important;
   display: flex;
   flex-direction: column;
@@ -54,82 +54,80 @@
   background: black; 
 } */
 
+.text {
+  color: black;
+  font-size: 100px;
+}
+
 .about .warningText {
   color: #ad1010;
 }
 
-.anchor {
+
+.timeline {
   padding-top: 75px;
 }
 
 @keyframes fadeIn {
   0% {
+    position: relative;
     opacity: 0;
   }
 
   25% {
+    position: relative;
     opacity: 0.25;
   }
 
   50% {
+    position: relative;
     opacity: 0.4;
   }
 
   75% {
+    position: relative;
     opacity: 0.5;
   }
 
   90% {
+    position: relative;
     opacity: 0.75;
   }
 
   100% {
+    position: relative;
     opacity: 1;
   }
 }
 
 @keyframes fadeOut {
   0% {
+    position: relative;
     opacity: 1;
   }
 
   25% {
+    position: relative;
     opacity: 0.75;
   }
 
   50% {
+    position: relative;
     opacity: 0.5;
   }
 
   75% {
+    position: relative;
     opacity: 0.4;
   }
 
   90% {
+    position: relative;
     opacity: 0.25;
   }
 
   100% {
+    position: relative;
     opacity: 0;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-
-  .about .text {
-    font-size: 30px;
-  }
-  
-  .about .aboutText {
-    font-size: 15px;
-    padding: 5px 100px;
-  }
-
-  .page {
-    position: absolute;
-  }
-
-  .anchor {
-    padding-top: 0px;
   }
 }
