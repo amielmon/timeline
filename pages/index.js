@@ -31,13 +31,13 @@ export default function Home({resEvents, resResources}) {
           <span>{warning}</span>
         </span>
       </div>
-      <div id='timeline' className={styles.timeline}>
+      <div id='timeline' className={styles.anchor}>
         <Timeline data={resEvents} />
       </div>
-      <div id='resources'>
+      <div id='resources' className={styles.anchor}>
         <Resources data={resResources} />
       </div>
-      <div id='contribute'>
+      <div id='contribute' >
         <Contribute />
       </div>
     </body>
