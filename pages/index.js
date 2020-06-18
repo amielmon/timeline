@@ -1,6 +1,7 @@
 import React from 'react';
 
 import fetch from 'isomorphic-unfetch'
+import Footer from '../components/Footer'
 import Header from '../components/Header'
 import styles from '../styles/index.module.css'
 import Resources from '../components/Resources'
@@ -40,6 +41,7 @@ export default function Home({resEvents, resResources}) {
       <div id='contribute'>
         <Contribute />
       </div>
+      <Footer />
     </body>
   )
 }
