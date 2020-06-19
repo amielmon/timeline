@@ -34,6 +34,7 @@
   display: flex;
   box-sizing: border-box;
   margin: 20px;
+  user-select: none;
 }
 
 .neumorphic:active {
