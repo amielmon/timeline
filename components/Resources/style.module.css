@@ -15,7 +15,6 @@
 .imagesContainer {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-evenly;
 }
 
 .image {
@@ -34,6 +33,7 @@
   padding: 1.3rem;
   display: flex;
   box-sizing: border-box;
+  margin: 20px;
 }
 
 .neumorphic:active {
