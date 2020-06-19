@@ -52,8 +52,8 @@ export default function Home({resEvents, resResources}) {
 
 Home.getInitialProps = async () => {
   const [resEvents, resResources] = await Promise.all([
-    fetch('http://localhost:3000/api/events').then(r => r.json()),
-    fetch('http://localhost:3000/api/resources').then(r => r.json())
+    fetch('https://blmtimeline.vercel.app//api/events').then(r => r.json()),
+    fetch('https://blmtimeline.vercel.app//api/resources').then(r => r.json())
   ]);
 
   return { resEvents, resResources };
