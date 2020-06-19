@@ -13,7 +13,6 @@ function Contribute() {
   const [isValidEmail, setIsValidEmail] = useState(false)
   const [showEmailError, setShowEmailError] = useState(false)
   const [showSubmissionError, setShowSubmissionError] = useState(false)
-  const [canShowName, setCanShowName] = useState(false)
   const [submitted, setSubmitted] = useState(false)
   
   const validateEmail = (email) => {
@@ -57,17 +56,6 @@ function Contribute() {
   useEffect(() => {
     setTimeout(() => setSubmitted(false), 5000)
   }, [submitted])
-
-  
-
-  console.log('isValidEmail', isValidEmail)
-  console.log('showEmailError', showEmailError)
-  console.log('showSubmissionError', showSubmissionError)
-  console.log('name', name)
-  console.log('email', email)
-  console.log('eventLinks', eventLinks)
-  console.log('resourceLinks', resourceLinks)
-
 
   return (
     <div className={styles.container}>
