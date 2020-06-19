@@ -7,6 +7,7 @@ import styles from '../styles/index.module.css'
 import Resources from '../components/Resources'
 import Timeline from '../components/Timeline'
 import Contribute from '../components/Contribute'
+import Head from 'next/head'
 import { useInView } from 'react-intersection-observer'
 
 const about = `Social media has played a huge role in informing each other, organizing our communties, 
@@ -23,6 +24,9 @@ export default function Home({resEvents, resResources}) {
 
   return (
     <body id='page' className={styles.page}>
+      <Head>
+      <meta name="viewport" content="initial-scale=0.5, width=device-width" />
+      </Head>      
       <Header />
       <div className={inView ? styles.about : styles.aboutOut} ref={ref}>
         <span className={styles.text}>BLACK LIVES MATTER.</span>

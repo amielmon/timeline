@@ -22,10 +22,10 @@ export default function Footer() {
         </span>
         <span className={styles.text}>
           amielmon@gmail.com
-          <a href='https://github.com/angelagomba'>
+          <a href='https://github.com/amielmon'>
             <Github className={styles.github}/>
           </a>
-          <a href='https://www.linkedin.com/in/angela-gomba/'>
+          <a href='https://www.linkedin.com/in/amielmon/'>
             <LinkedIn className={styles.linkedIn}/>
           </a>
         </span>

@@ -43,3 +43,13 @@
   color: #f0ead6;
   font-size: 15px;
 }
+
+@media only screen and (max-device-width: 600px) {
+  .message {
+    max-width: 50%;
+  }
+
+  .info {
+    margin-left: -70px;
+  }
+}
