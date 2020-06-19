@@ -44,6 +44,9 @@
   scroll-behavior: smooth;
   background: black;
   margin: 0;
+  position: relative;
+  overflow-x: hidden;
+  width: 100vw;
 }
 
 /* .page::-webkit-scrollbar {
@@ -117,28 +120,19 @@
 
 @media screen and (max-device-width: 600px) {
 
-  .about {
-    animation-name: none
-  }
-
-  .about .text {
-    font-size: 50px;
-  }
 
   
   .about .aboutText {
     font-size: 40px;
+    padding: 10px 10%;
   }
 
   .page {
     position: absolute;
   }
 
-  .anchor {
-    padding-top: 0px;
-  }
-
   .about .warningText {
     font-size: 30px;
+    padding: 10%
   }
 }

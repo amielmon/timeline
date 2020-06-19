@@ -266,15 +266,6 @@
   }
 }
 
-@media only screen and (max-width: 600px) {
-  .descriptionFrame {
-    width: 50vmin;
-  }
-  
-  .descriptionFrameOut {
-    width: 50vmin;
-  }
-}
 @media screen and (max-device-width: 600px) {
   .date {
     font-size: 50px;
@@ -288,12 +279,17 @@
   .description {
     font-size: 30px;
   }
+  
   .descriptionFrame {
     width: 50vmin;
   }
   
   .descriptionFrameOut {
     width: 50vmin;
+  }
+
+  .line {
+    height: 1400px;
   }
 
 }

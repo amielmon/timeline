@@ -25,7 +25,7 @@ export default function Home({resEvents, resResources}) {
   return (
     <body id='page' className={styles.page}>
       <Head>
-      <meta name="viewport" content="initial-scale=.4, maximum-scale=.4, width=device-width" />
+      <meta name="viewport" content="initial-scale=0.5, width=device-width" />
       </Head>      
       <Header />
       <div className={inView ? styles.about : styles.aboutOut} ref={ref}>
