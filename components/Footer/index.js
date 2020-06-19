@@ -10,7 +10,12 @@ export default function Footer() {
   return (
     <div className={styles.mainContainer}>
       <div className={styles.message}>
-        Made with love <Heart className={styles.heart}/> by Angela Gomba and Amiel Monasterial
+        <span style={styles.love}>Made with love
+        <Heart className={styles.heart}/> 
+        </span> 
+        <span>
+        by Angela Gomba and Amiel Monasterial
+        </span>
       </div>
       <span className={styles.info}>
         <span className={styles.contact}>Contact</span>
