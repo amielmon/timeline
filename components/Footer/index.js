@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 import Github from '../Icons/Github'
 import Heart from '../Icons/Heart'
