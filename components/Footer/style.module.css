@@ -9,8 +9,9 @@
 
 .message {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
+  align-self: center;
   font-family: 'Playfair Display', serif;
   font-size: 20px;
   color: #f0ead6;
@@ -35,6 +36,15 @@
 
 .linkedIn {
   margin-bottom: -12px;
+}
+
+.heart {
+  fill: #ad1010;
+  margin: 5px;
+}
+
+.heart:hover {
+  fill: black;
 }
 
 .text {
