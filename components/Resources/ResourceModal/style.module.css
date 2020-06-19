@@ -25,7 +25,7 @@
 }
 
 
-@media screen and (min-device-width: 400px) {
+@media screen and (min-device-width: 400px) and (max-device-width: 600px) {
   .container {
     width: 100%;
     left: 60%;
