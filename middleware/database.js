@@ -1,8 +1,5 @@
 import { MongoClient } from 'mongodb';
 import nextConnect from 'next-connect';
-import dotenv from 'dotenv';
-
-
 
 const client = new MongoClient(process.env.DB_CONNECTION, {
   useNewUrlParser: true,
