@@ -25,6 +25,7 @@ export default function Home({resEvents, resResources}) {
   return (
     <body id='page' className={styles.page}>
       <Head>
+      <title>Timeline of a Revolution</title>
       <meta name="viewport" content="initial-scale=0.5, width=device-width" />
       </Head>      
       <Header />
