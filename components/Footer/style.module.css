@@ -34,8 +34,16 @@
   margin-bottom: -10px;
 }
 
+.github:hover {
+  fill: rgba(252, 226, 27);
+}
+
 .linkedIn {
   margin-bottom: -12px;
+}
+
+.linkedIn:hover {
+  fill: rgba(252, 226, 27);
 }
 
 .heart {
