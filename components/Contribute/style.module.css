@@ -139,7 +139,7 @@
   width: fit-content;
 }
 
-@media only screen and (max-device-width: 600px) {
+@media only screen and (min-device-width: 400px) {
 
   .title {
     font-size: 70px;
@@ -163,5 +163,30 @@
     text-align: center;
   }
 
+}
+
+@media only screen and (max-device-width: 400px) {
+
+  .title {
+    font-size: 70px;
+  }
+
+  .form {
+    width: 90%;
+  }
+
+  .formTitle {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 24px;
+  }
+
+  .emailError {
+    left: 55%
+  }
+
+  .submissionError {
+    text-align: center;
+  }
 }
 

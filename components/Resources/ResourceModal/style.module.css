@@ -25,10 +25,23 @@
 }
 
 
-@media screen and (max-device-width: 600px) {
+@media screen and (min-device-width: 400px) {
   .container {
     width: 100%;
     left: 60%;
+  }
+
+  .close {
+    width: 8%;
+    margin-bottom: 16px;
+    margin-right: 20%;
+  }
+}
+
+@media screen and (max-device-width: 400px) {
+  .container {
+    width: 100%;
+    left: 56%;
   }
 
   .close {
