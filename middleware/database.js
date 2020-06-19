@@ -2,9 +2,9 @@ import { MongoClient } from 'mongodb';
 import nextConnect from 'next-connect';
 import dotenv from 'dotenv';
 
-dotenv.config()
 
-const client = new MongoClient('mongodb+srv://amielmon:Pajarillaga99%21@bunch-fdal9.mongodb.net/timeline?retryWrites=true&w=majority', {
+
+const client = new MongoClient(process.env.DB_CONNECTION, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
