@@ -1,14 +1,17 @@
 import React from 'react'
 
-import Email from '../Icons/Email'
 import Github from '../Icons/Github'
+import Heart from '../Icons/Heart'
 import LinkedIn from '../Icons/LinkedIn'
 import styles from './style.module.css'
 
 export default function Footer() {
+
   return (
     <div className={styles.mainContainer}>
-      <span className={styles.message}>Made with love by Angela Gomba and Amiel Monasterial</span>
+      <div className={styles.message}>
+        Made with love <Heart className={styles.heart}/> by Angela Gomba and Amiel Monasterial
+      </div>
       <span className={styles.info}>
         <span className={styles.contact}>Contact</span>
         <span className={styles.text}>

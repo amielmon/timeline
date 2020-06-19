@@ -5,4 +5,13 @@ export const IMAGE_PATH = Object.freeze({
   resource3: require('../../public/photos/resource-3.png'),
   resource4: require('../../public/photos/resource-4.png'),
   resource5: require('../../public/photos/resource-5.png'),
+  resource6: require('../../public/photos/resource-6.png'),
+  resource7: require('../../public/photos/resource-7.png'),
+  resource8: require('../../public/photos/resource-8.png'),
+  resource9: require('../../public/photos/resource-9.png'),
+  resource10: require('../../public/photos/resource-10.png'),
+  resource11: require('../../public/photos/resource-11.png'),
+  resource12: require('../../public/photos/resource-12.png'),
+  resource13: require('../../public/photos/resource-13.png'),
+  resource14: require('../../public/photos/resource-14.png'),
 })
