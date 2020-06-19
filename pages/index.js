@@ -10,7 +10,7 @@ import Contribute from '../components/Contribute'
 import Head from 'next/head'
 import { useInView } from 'react-intersection-observer'
 
-const about = `Social media has played a huge role in informing each other, organizing our communties, 
+const about = `Social media has played a huge role in informing each other, organizing our communities, 
                creating social awareness, and bringing justice. We hope to keep the stories shared from the protests 
                following the murder of George Floyd relevant through our dynamic timeline, and make collections of 
                informative posts accessible in our growing resources grid. Contributions to our collection can be made
