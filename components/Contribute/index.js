@@ -39,7 +39,7 @@ function Contribute() {
       setEmail('')
       setEventLinks('')
       setResourceLinks('')
-      const res = await fetch('https://blmtimeline.vercel.app/api/events', {
+      const res = await fetch('https://blmtimeline.com/api/events', {
         method: 'post',
         body: JSON.stringify({name: name, email: email, eventLinks: eventLinks, resourceLinks: resourceLinks})
       })

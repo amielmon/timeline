@@ -25,6 +25,7 @@ export default function Home({resEvents, resResources}) {
   return (
     <body id='page' className={styles.page}>
       <Head>
+      <title>Timeline of a Revolution</title>
       <meta name="viewport" content="initial-scale=0.5, width=device-width" />
       </Head>      
       <Header />
@@ -52,8 +53,8 @@ export default function Home({resEvents, resResources}) {
 
 Home.getInitialProps = async () => {
   const [resEvents, resResources] = await Promise.all([
-    fetch('https://blmtimeline.vercel.app/api/events').then(r => r.json()),
-    fetch('https://blmtimeline.vercel.app/api/resources').then(r => r.json())
+    fetch('https://blmtimeline.com/api/events').then(r => r.json()),
+    fetch('https://blmtimeline.com/api/resources').then(r => r.json())
   ]);
 
   return { resEvents, resResources };
