@@ -21,6 +21,8 @@ export default function Home({resEvents, resResources}) {
   resEvents.sort((a,b) => new Date(a.date) - new Date(b.date))
 
   const [ref, inView] = useInView({threshold: 0.5})
+  
+  console.log('ga', process.env.GA_TRACKING_ID)
 
   return (
     <body id='page' className={styles.page}>
