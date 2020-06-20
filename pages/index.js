@@ -21,12 +21,30 @@ export default function Home({resEvents, resResources}) {
   resEvents.sort((a,b) => new Date(a.date) - new Date(b.date))
 
   const [ref, inView] = useInView({threshold: 0.5})
+  
+  console.log('ga', process.env.GA_TRACKING_ID)
 
   return (
     <body id='page' className={styles.page}>
       <Head>
-      <title>Timeline of a Revolution</title>
-      <meta name="viewport" content="initial-scale=0.5, width=device-width" />
+        <script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GA_TRACKING_ID}`}
+        />
+        <script
+          dangerouslySetInnerHTML={{
+          __html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '${process.env.GA_TRACKING_ID}', {
+            page_path: window.location.pathname,
+          });
+          `,
+          }}
+        />
+        <title>Timeline of a Revolution</title>
+        <meta name="viewport" content="initial-scale=0.5, width=device-width" />
       </Head>      
       <Header />
       <div className={inView ? styles.about : styles.aboutOut} ref={ref}>
